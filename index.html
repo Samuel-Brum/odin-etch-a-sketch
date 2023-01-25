@@ -16,12 +16,12 @@
 
     <div class='change-grid'>
         <div class='variable-grid'>
-            <label for="size_of_grid">Choose a size of grid between 1 and 20</label>
+            <label id='form_label' for="size_of_grid">Choose a size of grid between 1 and 20</label>
             <input type="text" id="size_of_grid">
         </div>       
         <div class="grid-button">
-            <button id="change_grid">Change grid size</button>
-            <button id="reset-grid">Reset grid</button>
+            <button id="change_grid" onclick="changeGrid()">Change grid size</button>
+            <button id="reset-grid" onclick="resetGrid('container')">Reset grid</button>
         </div>
     </div>
     
