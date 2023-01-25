@@ -16,3 +16,22 @@
     min-width: 10px;
     min-height: 10px;
 }
+
+.change-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.variable-grid {
+    display: flex;
+    flex-direction: column ;
+    gap: 5px;
+}
+.grid-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,6 +1,6 @@
 container = document.querySelector('#container');
 
-const INIT_SQUARES = 12;
+const INIT_SQUARES = 10;
 
 
 function createGrid(numberOfSquares) {
@@ -14,6 +14,9 @@ function createGrid(numberOfSquares) {
     for (let i = 0; i < INIT_SQUARES * INIT_SQUARES; i++) {
         const div = document.createElement('div');
         div.className = 'square';
+        div.onmouseover = function () {
+            div.style.backgroundColor = "black";
+        }
         container.appendChild(div);
         div.style.width = height/numberOfSquares+"px";
         div.style.height = height/numberOfSquares+"px";
