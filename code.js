@@ -7,10 +7,10 @@ function createGrid(numberOfSquares) {
     const width = container.offsetWidth;
     const height = container.offsetHeight;
     let grid = document.getElementById("container");
-    grid.setAttribute("style", "grid-template-rows: repeat(" + numberOfSquares + ", 12px);");
-    grid.setAttribute("style", "grid-template-columns: repeat(" + numberOfSquares + ", 12px);");
+    grid.setAttribute("style", "grid-template-rows: repeat(" + numberOfSquares + ", 11.14px);");
+    grid.setAttribute("style", "grid-template-columns: repeat(" + numberOfSquares + ", 11.14px);");
 
-    for (let i = 0; i < INIT_SQUARES * INIT_SQUARES; i++) {
+    for (let i = 0; i < numberOfSquares * numberOfSquares; i++) {
         const div = document.createElement('div');
         div.className = 'square';
         div.onmouseover = function () {
@@ -40,7 +40,7 @@ function resetGrid() {
 
 function changeGrid() {
     const newSize = document.getElementById('size_of_grid').value;
-    if (newSize != "") {
+    if (newSize != "" && newSize > 0 && newSize < 31) {
         deleteChild('container');
         createGrid(newSize);
     } else {
