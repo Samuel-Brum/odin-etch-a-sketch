@@ -1,16 +1,17 @@
 container = document.querySelector('#container');
 
-const INIT_SQUARES = 5;
+const INIT_SQUARES = 12;
 
 
 function createGrid(numberOfSquares) {
     const container = document.getElementById("container");
     const width = container.offsetWidth;
     const height = container.offsetHeight;
-    container.style.setProperty("--grid-rows", numberOfSquares);
-    container.style.setProperty("--grid-cols", numberOfSquares);
+    let grid = document.getElementById("container");
+    grid.setAttribute("style", "grid-template-rows: repeat(" + numberOfSquares + ", 1fr)");
+    grid.setAttribute("style", "grid-template-columns: repeat(" + numberOfSquares + ", 12px)");
 
-    for (let i = 0; i < INIT_SQUARES; i++) {
+    for (let i = 0; i < INIT_SQUARES * INIT_SQUARES; i++) {
         const div = document.createElement('div');
         div.className = 'square';
         container.appendChild(div);
